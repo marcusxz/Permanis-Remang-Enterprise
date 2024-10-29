@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permanis Remang Enterprise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <!-- Navigation Bar -->
+        <div class="navbar" id="nav">
+            <img class="navImg" src="images/permanis-logo.png" alt="Permanis Logo">
+            <ul class="links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contacts">Contact Us</a></li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#footer">Contact Us</a></li>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <div class="hero-text">
+            <h1 class="glow">Permanis Remang Enterprise</h1>
+            <p>Your trusted logistics partner</p>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div class="services-section" id="services">
+        <div class="services-header">
+            <h1>Our Services</h1>
+            <div class="services-block">
+                <div class="services-text">
+                    <p class="services-main">Logistics - Shipping container stuffing and unstuffing</p>
+                    <p>
+                        At Permanis Remang Enterprise, we provide expert container stuffing and unstuffing services, tailored to the needs of businesses, 
+                        organizations, and individuals. Our professional team ensures safe and reliable cargo handling, from fragile items to heavy machinery.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Efficiency and Reliability:</strong> Based in Miri, we specialize in container unstuffing with a dedicated team ready to manage all unloading and unpacking tasks.
+                        </li>
+                        <li>
+                            <strong>Customized Solutions:</strong> Every cargo is unique. That's why we offer customized solutions to suit your specific requirements.
+                        </li>
+                    </ul>
+                    <p>
+                        Let us handle your container logistics with care and expertise. Contact us today to learn how we can help with your cargo needs.
+                    </p>
+                </div>
+                <div class="services-images" id="gallery">
+                    <div class="slideshow-container">
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade">
+                            <img src="images/workforce-loading.jpg">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="images/container-load.jpg">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="images/container-half.jpg">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="images/container-half.jpg">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="images/unstuffing-1.jpg">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="images/unstuffing-2.jpg">
+                        </div>
+                    
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- About Us -->
+     <div class="about-section" id="about">
+        <div class="about-text">
+            <h1>About Us</h1>
+            <div class="company-info">
+                <div class="founder-photo">
+                    <img src="images/boniface-brandah.jpg" alt="Boniface Brandah portrait">
+                </div>
+                <div class="company-info-text">
+                    <p>
+                        Permanis Remang Enterprise was founded by Boniface Brandah somewhere in July 2023 
+                        where he was started as a part time businesses by dealing with local community, family 
+                        and friends to grow up his company to current stage.
+                    </p>
+                    <p>
+                        While there are hundreds of companies running in the same field, there are only a handful who are 
+                        comprehensive and very responsive, offering full scope digital and traditional marketing services, 
+                        catering to your needs and on your timeline.  Although we are based in Miri, but we can deliver our 
+                        services borderless. 
+                    </p>
+                    <p>
+                        We in Permanis Remang Enterprise, help people achieve independence by making it easier to close up 
+                        the deals and negotiations on any available platforms. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contacts -->
+    <div class="contacts-section" id="contacts">
+        <div class="contacts-text">
+            <h1>Contact Us</h1>
+            <div class="contacts-info">
+                <div>
+                    <p><i class="fas fa-building"></i>Main Office: Lot 442, Tingkat 1, Bangunan DUBS, Jalan Bendahara, 98000 Miri, Sarawak</p>
+                </div>
+                <div>
+                    <p><i class="fas fa-building"></i>Site Office: Lot 4114, Lorong Desa Senadin 2C-6C-2, Senadin, 98000 Miri, Sarawak</p>
+                </div>
+                <div>
+                    <p><i class="fas fa-phone-alt"></i>Office Phone No: 016-2428301</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright &copy; 2024 Permanis Remang Enterprise. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contains('open');
+
+            toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        }
+
+        function myFunction() {
+            var x = document.getElementById("nav")
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            }
+            else {
+                x.className = "navbar";
+            }
+        }
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>

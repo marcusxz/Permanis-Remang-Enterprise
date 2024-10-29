@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    font-family: "Roboto Flex", sans-serif;
+}
+
+p {
+    text-align: justify;
+    font-size: 20px;
+}
+
+h1 {
+    padding-bottom: 50px;
+}
+
+.navbar ul,
+.navbar li {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    gap: 60px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+}
+
+a:hover {
+    background-color: rgba(255,222,90,255);
+}
+
+a:visited {
+    color: inherit;
+}
+
+.navbar {
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navImg {
+    height: 100px;
+    width: auto;
+}
+
+.hero-section,
+.services-section,
+.about-section,
+.gallery-section,
+.contacts-section {
+    background-size: cover; /* Cover the entire section */
+    background-position: center;
+    margin-bottom: 1px;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure ::before doesn’t overflow */
+}
+
+.hero-section {
+    animation: header-image-animation linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
+    background-image: url(images/forklift-warehouse.jpg);
+}
+
+@keyframes fade-out {
+    to { opacity: 0;}
+}
+
+@keyframes header-image-animation {
+    25% {opacity: 1;}
+    85%, 100% {opacity: .5; scale: 2;}
+}
+
+.services-section {
+    background-image: url(images/containers-image.jpg);
+}
+
+.about-section {
+    background-image: url(images/boxes-van.jpg);
+}
+
+.hero-section {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes backgroundSlideshow {
+    0% { background-image: url(images/unload-van-2.jpg); }
+    33% { background-image: url(images/unload-van-3.jpg); }
+    66% { background-image: url(images/unload-van-4.jpg); }
+    100% { background-image: url(images/unload-van-5.jpg); }
+}
+
+.hero-text,
+.services-text,
+.about-text {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    padding: 40px;
+    color: white;
+    z-index: 1;
+}
+
+.hero-text p {
+    text-align: center;
+}
+
+.services-text {
+    max-width: 800px;
+}
+
+/* Wrapper around the carousel, which hides the overflowing images */
+.gallery-section {
+    width: 100%; /* Full width of the page */
+    overflow: hidden; /* Hide anything that overflows horizontally */
+    position: relative;
+}
+
+/* Container that holds the images */
+.carousel-container {
+    display: flex; /* Arrange images in a row */
+    justify-content: flex-start; /* Align items from the start */
+    animation: scroll-left 40s linear infinite; /* Animation to scroll images */
+}
+
+/* Styling for the images */
+.carousel-container img {
+    width: 200px; /* Adjust the width of each image */
+    height: auto;
+    /* margin-right: 10px; Space between images */
+}
+
+/* Animation to scroll images from right to left */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0); /* Start at original position */
+    }
+    100% {
+        transform: translateX(-50%); /* Move entire container left */
+    }
+}
+
+.contacts-section {
+    background-image: url(images/discussion.jpg);
+    padding: 20px 20px;
+    text-align: center;
+    color: white;
+}
+
+.contacts-info {
+    display: flex;
+    gap: 100px;
+}
+
+.contacts-info div {
+    max-width: 400px;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.company-info,
+.founder-text {
+    text-align: left;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1000px;
+}
+
+.founder-photo {
+    flex-shrink: 0;
+}
+
+.founder-photo img {
+    width: 150px;
+    border-radius: 15px;
+}
+
+.company-info-text {
+    text-align: justify;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+}
+  
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 400px;
+    border-radius: 15px;
+}
+  
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+  }
+  
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.services-section {
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+
+.services-text {
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+}
+
+.services-header h1 {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+.services-block {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.services-text li {
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+}
+
+.navbar .toggle_btn {
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    color: black;
+    right: 2em;
+    top: 100px;
+    height: 0px;
+    width: 200px;
+    background: rgba(255,222,90,255);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 2;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 160px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts-section i {
+    margin-right: 10px;
+}
+
+footer {
+    padding: 30px;
+}
+
+footer > p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+p {
+    font-size: 25px;
+}
+
+li {
+    font-size: 25px;
+}
+
+.hero-text p {
+    font-size: 40px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.hero-text h1 {
+    text-shadow: 7px 9px 2px rgba(248,248,248,0.6);
+}
+
+.services-section,
+.about-section,
+.contacts-section {
+    scale: .9; opacity: .5;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
+.services-main {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background-color: rgba(255,222,90,255);
+    color: black;
+}
+
+@keyframes fade-in {
+    to { scale: 1; opacity: 1;}
+}
+
+@media (max-width: 992px) {
+    .navbar .links {
+        display: none;
+    }
+    .navbar .toggle_btn {
+        display: block;
+    }
+    .dropdown_menu {
+        display: block;
+    }
+    .company-info {
+        flex-direction: column;
+    }
+    .services-block {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .mySlides img {
+        width: 300px;
+        border-radius: 15px;
+    }
+    .services-section,
+    .about-section,
+    .contacts-section {
+        height: fit-content;
+        padding-bottom: 50px;
+    }
+    .contacts-info {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
