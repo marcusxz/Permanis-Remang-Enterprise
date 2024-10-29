@@ -66,19 +66,7 @@ a:visited {
 }
 
 .hero-section {
-    animation: header-image-animation linear forwards;
-    animation-timeline: view();
-    animation-range: exit;
-    background-image: url(images/forklift-warehouse.jpg);
-}
-
-@keyframes fade-out {
-    to { opacity: 0;}
-}
-
-@keyframes header-image-animation {
-    25% {opacity: 1;}
-    85%, 100% {opacity: .5; scale: 2;}
+    animation: backgroundSlideshow 15s linear infinite;
 }
 
 .services-section {
