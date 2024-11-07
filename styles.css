@@ -67,15 +67,15 @@ a:visited {
 
 .hero-section {
     /*animation: backgroundSlideshow 15s linear infinite;*/
-    background-image: url(images/forklift-warehouse.jpg);
+    background-image: url(images/forklift-warehouse.webp);
 }
 
 .services-section {
-    background-image: url(images/containers-image.jpg);
+    background-image: url(images/containers-image.webp);
 }
 
 .about-section {
-    background-image: url(images/boxes-van.jpg);
+    background-image: url(images/boxes-van.webp);
 }
 
 .hero-section {
@@ -85,12 +85,14 @@ a:visited {
     background-position: center;
 }
 
+/*
 @keyframes backgroundSlideshow {
     0% { background-image: url(images/unload-van-2.jpg); }
     33% { background-image: url(images/unload-van-3.jpg); }
     66% { background-image: url(images/unload-van-4.jpg); }
     100% { background-image: url(images/unload-van-5.jpg); }
 }
+*/
 
 .hero-text,
 .services-text,
@@ -143,7 +145,7 @@ a:visited {
 }
 
 .contacts-section {
-    background-image: url(images/discussion.jpg);
+    background-image: url(images/discussion.webp);
     padding: 20px 20px;
     text-align: center;
     color: white;
